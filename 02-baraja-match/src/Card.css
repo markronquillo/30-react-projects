@@ -1,0 +1,432 @@
+.Card {
+  width: 100px;
+  height: 150px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 5px;
+
+  position: relative;
+  /*font-size: 80%;*/
+  text-align: center;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  transform: rotateY(180deg);
+}
+
+.Card.display {
+  transform: rotateY(360deg);
+}
+
+.card-container {
+  perspective: 800px;
+}
+
+.Card .label {
+  font-size: 1em;
+}
+
+.Card .front, .Card .back {
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  display: block;
+}
+
+.Card .front {
+  background: white;
+}
+
+.Card .back {
+  background: url('../public/img/back.jpg');
+  background-size: cover;
+  transform: rotateY(180deg);
+}
+
+.Card.red{
+  color: red;
+}
+
+.Card .suit .suitImage {
+  width: 60%;
+}
+
+.Card .suit.mini {
+  font-size: 0.8em;
+}
+
+.Card .upside-down {
+  transform: rotate(180deg);
+}
+
+.Card .corner.left {
+  position: absolute;
+
+  top: 5%;
+  left: 5%;
+  line-height: 1em;
+}
+
+.Card .corner.right {
+  position: absolute;
+
+  bottom: 5%;
+  right: 5%;
+  line-height: 1em;
+}
+
+.Card .center {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  font-size: 1.3em;
+  /*padding: 30px;*/
+  position: relative
+}
+
+.Card .center.single {
+  flex-direction: column;
+}
+
+/***** TWO ******/
+.Card .center.two div.suit:nth-child(1) {
+  position: absolute; 
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.Card .center.two div.suit:nth-child(2) {
+  position: absolute; 
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%) rotate(180deg);
+}
+/***** END TWO ******/
+
+/***** THREE ******/
+.Card .center.three div.suit:nth-child(1) {
+  position: absolute; 
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.Card .center.three div.suit:nth-child(2) {
+  position: absolute; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.Card .center.three div.suit:nth-child(3) {
+  position: absolute; 
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%) rotate(180deg);
+}
+/***** END THREE ******/
+
+/***** FOUR ******/
+.Card .center.four div.suit:nth-child(1) {
+  position: absolute; 
+  top: 15%;
+  left: 20%;
+}
+.Card .center.four div.suit:nth-child(2) {
+  position: absolute; 
+  top: 15%;
+  right: 20%;
+}
+.Card .center.four div.suit:nth-child(3) {
+  position: absolute; 
+  bottom: 15%;
+  left: 20%;
+  transform: rotate(180deg);
+}
+.Card .center.four div.suit:nth-child(4) {
+  position: absolute; 
+  bottom: 15%;
+  right: 20%;
+  transform: rotate(180deg);
+}
+/***** END ******/
+
+/***** FIVE ******/
+.Card .center.five div.suit:nth-child(1) {
+  position: absolute; 
+  top: 15%;
+  left: 20%;
+}
+.Card .center.five div.suit:nth-child(2) {
+  position: absolute; 
+  top: 15%;
+  right: 20%;
+}
+.Card .center.five div.suit:nth-child(3) {
+  position: absolute; 
+  bottom: 15%;
+  left: 20%;
+  transform: rotate(180deg);
+}
+.Card .center.five div.suit:nth-child(4) {
+  position: absolute; 
+  bottom: 15%;
+  right: 20%;
+  transform: rotate(180deg);
+}
+.Card .center.five div.suit:nth-child(5) {
+  position: absolute; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/***** END ******/
+
+/***** SIX ******/
+.Card .center.six div.suit:nth-child(1) {
+  position: absolute; 
+  top: 15%;
+  left: 20%;
+}
+.Card .center.six div.suit:nth-child(2) {
+  position: absolute; 
+  top: 15%;
+  right: 20%;
+}
+.Card .center.six div.suit:nth-child(3) {
+  position: absolute; 
+  bottom: 15%;
+  left: 20%;
+  transform: rotate(180deg);
+}
+.Card .center.six div.suit:nth-child(4) {
+  position: absolute; 
+  bottom: 15%;
+  right: 20%;
+  transform: rotate(180deg);
+}
+.Card .center.six div.suit:nth-child(5) {
+  position: absolute; 
+  top: 50%;
+  left: 20%;
+  transform: translateY(-50%);
+}
+.Card .center.six div.suit:nth-child(6) {
+  position: absolute; 
+  top: 50%;
+  right: 20%;
+  transform: translateY(-50%);
+}
+/***** END ******/
+
+/***** SEVEN ******/
+.Card .center.seven div.suit:nth-child(1) {
+  position: absolute; 
+  top: 15%;
+  left: 20%;
+}
+.Card .center.seven div.suit:nth-child(2) {
+  position: absolute; 
+  top: 15%;
+  right: 20%;
+}
+.Card .center.seven div.suit:nth-child(3) {
+  position: absolute; 
+  bottom: 15%;
+  left: 20%;
+  transform: rotate(180deg);
+}
+.Card .center.seven div.suit:nth-child(4) {
+  position: absolute; 
+  bottom: 15%;
+  right: 20%;
+  transform: rotate(180deg);
+}
+.Card .center.seven div.suit:nth-child(5) {
+  position: absolute; 
+  top: 50%;
+  left: 20%;
+  transform: translateY(-50%);
+}
+.Card .center.seven div.suit:nth-child(6) {
+  position: absolute; 
+  top: 50%;
+  right: 20%;
+  transform: translateY(-50%);
+}
+.Card .center.seven div.suit:nth-child(7) {
+  position: absolute; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -110%);
+}
+/***** END ******/
+
+/***** EIGHT ******/
+.Card .center.eight div.suit:nth-child(1) {
+  position: absolute; 
+  top: 15%;
+  left: 20%;
+}
+.Card .center.eight div.suit:nth-child(2) {
+  position: absolute; 
+  top: 15%;
+  right: 20%;
+}
+.Card .center.eight div.suit:nth-child(3) {
+  position: absolute; 
+  bottom: 15%;
+  left: 20%;
+  transform: rotate(180deg);
+}
+.Card .center.eight div.suit:nth-child(4) {
+  position: absolute; 
+  bottom: 15%;
+  right: 20%;
+  transform: rotate(180deg);
+}
+.Card .center.eight div.suit:nth-child(5) {
+  position: absolute; 
+  top: 50%;
+  left: 20%;
+  transform: translateY(-50%);
+}
+.Card .center.eight div.suit:nth-child(6) {
+  position: absolute; 
+  top: 50%;
+  right: 20%;
+  transform: translateY(-50%);
+}
+.Card .center.eight div.suit:nth-child(7) {
+  position: absolute; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -110%);
+}
+.Card .center.eight div.suit:nth-child(8) {
+  position: absolute; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 20%) rotate(180deg);
+}
+/***** END ******/
+
+/***** NINE ******/
+.Card .center.nine div.suit:nth-child(1) {
+  position: absolute; 
+  top: 15%;
+  left: 20%;
+}
+.Card .center.nine div.suit:nth-child(2) {
+  position: absolute; 
+  top: 15%;
+  right: 20%;
+}
+.Card .center.nine div.suit:nth-child(3) {
+  position: absolute; 
+  bottom: 15%;
+  left: 20%;
+  transform: rotate(180deg);
+}
+.Card .center.nine div.suit:nth-child(4) {
+  position: absolute; 
+  bottom: 15%;
+  right: 20%;
+  transform: rotate(180deg);
+}
+.Card .center.nine div.suit:nth-child(5) {
+  position: absolute; 
+  top: 50%;
+  left: 20%;
+  transform: translateY(-90%);
+}
+.Card .center.nine div.suit:nth-child(6) {
+  position: absolute; 
+  top: 50%;
+  right: 20%;
+  transform: translateY(-90%);
+}
+.Card .center.nine div.suit:nth-child(7) {
+  position: absolute; 
+  bottom: 50%;
+  left: 20%;
+  transform: translateY(90%) rotate(-180deg);
+}
+.Card .center.nine div.suit:nth-child(8) {
+  position: absolute; 
+  bottom: 50%;
+  right: 20%;
+  transform: translateY(90%) rotate(-180deg);
+}
+.Card .center.nine div.suit:nth-child(9) {
+  position: absolute; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/***** END ******/
+
+/***** TEN ******/
+.Card .center.ten div.suit:nth-child(1) {
+  position: absolute; 
+  top: 15%;
+  left: 20%;
+}
+.Card .center.ten div.suit:nth-child(2) {
+  position: absolute; 
+  top: 15%;
+  right: 20%;
+}
+.Card .center.ten div.suit:nth-child(3) {
+  position: absolute; 
+  bottom: 15%;
+  left: 20%;
+  transform: rotate(180deg);
+}
+.Card .center.ten div.suit:nth-child(4) {
+  position: absolute; 
+  bottom: 15%;
+  right: 20%;
+  transform: rotate(180deg);
+}
+.Card .center.ten div.suit:nth-child(5) {
+  position: absolute; 
+  top: 50%;
+  left: 20%;
+  transform: translateY(-90%);
+}
+.Card .center.ten div.suit:nth-child(6) {
+  position: absolute; 
+  top: 50%;
+  right: 20%;
+  transform: translateY(-90%);
+}
+.Card .center.ten div.suit:nth-child(7) {
+  position: absolute; 
+  bottom: 50%;
+  left: 20%;
+  transform: translateY(90%) rotate(-180deg);
+}
+.Card .center.ten div.suit:nth-child(8) {
+  position: absolute; 
+  bottom: 50%;
+  right: 20%;
+  transform: translateY(90%) rotate(-180deg);
+}
+.Card .center.ten div.suit:nth-child(9) {
+  position: absolute; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 30%) rotate(180deg);
+}
+.Card .center.ten div.suit:nth-child(10) {
+  position: absolute; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -110%);
+}
+/***** END ******/
+
+.Card .center.single .suit {
+  font-size: 2em;
+}

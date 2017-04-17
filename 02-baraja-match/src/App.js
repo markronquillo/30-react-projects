@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import Card from './Card';
-import data from './card_data';
+import CardMatch from './CardMatch';
 
 class App extends Component {
   constructor(props) {
@@ -14,15 +13,9 @@ class App extends Component {
     return (
       <div className="App">
         <header className="main-header">
-            <h1 className="title"> Baraja </h1>
-            <span className="subtitle">playing cards</span>
+            <h1 className="title"> Baraja - Matching Game </h1>
         </header>
-
-        <div className="cardsWrap">
-          {data.map((card, index) => {
-            return <Card key={index} {...card} />
-          })}
-        </div>
+        <CardMatch /> 
       </div>
     );
   }
