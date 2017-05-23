@@ -1,0 +1,43 @@
+.main-navigation {
+  background: #2c2d31;
+  display: flex;
+  flex-flow: row;
+  color: white;
+  height: 30px;
+  padding: 20px;
+}
+
+.main-navigation .logo {
+  text-align: center;
+  font-size: 18pt;
+}
+
+.main-navigation .right-links {
+  text-align: right;
+}
+
+.main-navigation .left-links, 
+.main-navigation .logo, 
+.main-navigation .right-links {
+  flex-grow: 1;
+}
+
+.main-navigation .button {
+  font-size: 12pt;
+  font-weight: 100;
+  margin: 0 10px;
+}
+
+/* --------------------------------------------------------------- */
+
+.button {
+  border-radius: 5px;
+  border: none;
+  height: 30px;
+  padding: 0 15px;
+}
+
+.button.primary {
+  background: #779de1;
+  color: white;
+}

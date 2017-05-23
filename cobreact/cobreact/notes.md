@@ -1,0 +1,6 @@
+### requestAnimationFrame
+
+`window.requestAnimationFrame(callback);`
+
+
+
